@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int minChanges(int n, int k) {
+        // If n is already equal to k, no changes are needed
+        if (n == k) return 0;
+        
+        // Check if it's possible to transform n into k
+        // Any bit in k that is 1 must be 1 in n as well, otherwise it's impossible
+        if ((n | k) != n) return -1;
+        
+        // Count the number of 1 bits in n that need to be turned to 0
+        int changes = 0;
+        int xor_value = n ^ k;
+        
+        while (xor_value > 0) {
+            changes += (xor_value & 1);
+            xor_value >>= 1;
+        }
+        
+        return changes;
+    }
+};
