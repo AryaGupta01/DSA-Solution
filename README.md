@@ -1,2 +1,2 @@
 # DSA-Solution
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/minjungsung/leethub)
+Collection of DSA question's Solutions to ace the coding interview! 
